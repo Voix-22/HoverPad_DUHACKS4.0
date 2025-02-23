@@ -67,3 +67,7 @@ With AI-powered hand tracking, users can move the cursor, click, scroll, drag, a
 1. Install dependencies using:  
    ```bash
    pip install -r requirements.txt
+2. Run the Flask server:
+   ```bash
+   python pri.py
+3. Open index.html in your browser and start using HoverPad!
