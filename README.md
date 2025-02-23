@@ -19,3 +19,17 @@ With AI-powered hand tracking, users can move the cursor, click, scroll, drag, a
 
 ## Technologies We Used  
 **OpenCV, MediaPipe, Flask, PyAutoGUI, JavaScript, HTML/CSS**  
+
+# HoverPad - Gesture Controls  
+
+## Single-Hand Gestures  
+- 🖱 **Move Cursor** → Move your hand in the air  
+- ✊ **Left Click** → Pinch thumb & index finger together (distance < 30px)  
+- 🤏 **Drag & Drop** → Pinch thumb & middle finger together (distance < 40px)  
+- 🖐 **Scroll** → Move hand up/down while fingers spread  
+- ✋ **Stop Gesture Mode** → Show a fist for 2 seconds  
+
+## Two-Hand Gestures  
+- 🔄 **Zoom In/Out** → Move both hands apart/together  
+- ↔ **Switch Tabs** → Move left or right hand far left/right  
+- 🔄 **Scroll Up/Down** → Adjust distance between index fingers of both hands  
