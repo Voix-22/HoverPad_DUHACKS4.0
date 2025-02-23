@@ -1,6 +1,5 @@
 # HoverPad_DUHACKS_4.0
-
-## Tagline  
+  
 **A touch-free, AI-powered gesture control system for seamless computer interaction.**  
 
 ## The Problem it Solves  
