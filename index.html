@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverPad - Virtual Mouse Control</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00aaff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+        }
+        button {
+            font-size: 18px;
+            padding: 12px 25px;
+            margin: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        #start-btn {
+            background-color: #00aaff;
+            color: white;
+        }
+        #start-btn:hover {
+            background-color: #0088cc;
+        }
+        #stop-btn {
+            background-color: #ff4c4c;
+            color: white;
+        }
+        #stop-btn:hover {
+            background-color: #cc0000;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HoverPad - Virtual Mouse Control</h1>
+        <button id="start-btn" onclick="startMouse()">Start Virtual Mouse</button>
+        <button id="stop-btn" onclick="stopMouse()">Stop Virtual Mouse</button>
+        <p id="status">Status: Not Running</p>
+    </div>
+
+    <script>
+        async function startMouse() {
+            let response = await fetch("http://localhost:5000/start", { method: "POST" });
+            let result = await response.json();
+            document.getElementById("status").innerText = "Status: " + result.message;
+        }
+
+        async function stopMouse() {
+            let response = await fetch("http://localhost:5000/stop", { method: "POST" });
+            let result = await response.json();
+            document.getElementById("status").innerText = "Status: " + result.message;
+        }
+    </script>
+</body>
+</html>
